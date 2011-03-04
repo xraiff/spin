@@ -1,0 +1,160 @@
+global {
+	font-family: Arial, Helvetica, "_sans";
+	font-weight: normal;
+}
+
+Alert
+{
+	paddingLeft: 0;
+	paddingRight: 0;
+	backgroundColor: #000000;
+	borderColor: #000000;
+	color: #ffffff;
+	textAlign: center;
+	fontSize: 12;
+	corner-radius:10;
+	rounded-bottom-corners:true;
+	button-style-name:"buttonBarButtonStyle";
+	border-thickness:0;
+}
+
+Application {
+	background-alpha: 0;
+	themeColor: #b7b7c3;
+	color: #000000;
+	horizontalAlign: center;
+	paddingBottom:0;
+	paddingLeft:0;
+	paddingRight:0;
+	paddingTop: 0;
+	backgroundDisabledColor: #000000;
+}
+
+Canvas
+{
+	backgroundColor: #b7b7c3;	
+}
+
+ComboBox {
+	alternatingItemColors: #233950, #1D3244;
+	backgroundAlpha: 0;
+	borderColor: #1D3244;
+	cornerRadius: 0;
+	color: #CAD9EE;
+	dropdownStyleName: "myComboBoxDropDowns";
+	fillAlphas: 0,0,0,0;
+	fillColors: #C5DBF0, #81ADDC, #81ADDC, #C5DBF0;
+	highlightAlphas: 0, 0;
+	iconColor: #96aeca;
+	rollOverColor: #3d5c80;
+	selectionColor: #bbcfe7;
+	textRollOverColor: #ffffff;
+	textSelectedColor: #000000;
+	themeColor: #1D3244;
+	useRollOver: false;
+}
+		
+DataGrid {
+	alternatingItemColors: #a6a6c3, #b7b7c3;
+	borderThickness: 0;
+	borderColor:#a6a6c3;
+	color: #3139ba;
+	dropShadowEnabled: false;
+/*	drop-indicator-skin:Embed(source="/com/playlist/assets/siteSkin.swf", symbol="datagridHeaderBackground"); */
+	fontSize: 11;
+	fontWeight: bold;
+/*	headerBackgroundSkin: ClassReference("com.playlist.cairngorm.view.skins.GradientBackgroundSkin"); */
+	iconColor: #96aeca;
+	rollOverColor: #3d5c80;
+	selectionColor: #7676c3;
+	textRollOverColor: #ffffff;
+	textSelectedColor: #132B47;
+	verticalGridLines: true;
+	verticalGridLineColor: #162332;
+}
+/* 	headerStyleName: "mydataGridHeaderStyle"; */
+
+/*
+DataGridHeader {
+	fillColors: #1D3244, #3d5c80, #1D3244;
+	fillAlphas: 1, 1, 1;
+	fillRatios: 0, 63, 255;
+}
+*/
+
+FormItem {
+	font-size: 12;	
+}
+
+
+HScrollBar {
+	cornerRadius: 0;
+	highlightAlphas: 0.32, 0.23;
+	fillAlphas: 1, 1, 1, 1;
+	fillColors: #94A7BE, #4B6580, #4B6580, #94A7BE;
+	trackColors: #000000, #000000;
+	themeColor: #94A7BE;
+	borderColor: #000000;
+	iconColor: #ffffff;
+}
+
+RadioButton {
+   highlightAlphas: 0, 0;
+   fillColors: #666666, #999999, #666666, #999999;
+   borderColor: #333333;
+   iconColor: #ffffff;
+   disabledIconColor: #999999;
+   color: #ffffff;
+   textSelectedColor: #ffffff;
+   textRollOverColor: #94a7be;
+   themeColor: #ffffff;
+}
+
+TitleWindow {
+	borderAlpha: 1;
+	borderColor:#000000;
+	corner-radius:10;
+	border-width:10;
+	rounded-bottom-corners:true;
+	background-color:#000000;
+	color:#ffffff;
+	title-style-name: "TitleWindowTitle";
+}
+
+Text {
+	fontSize:12;
+	fontWeight:Bold;
+	color:b7b7c3;
+}
+
+TextInput {
+	background-color:#ffffff;
+	borderColor:#222222;
+	font-size:12;
+	color:#222222;
+}
+
+ToolTip
+{
+	background-alpha:1;
+	background-color: #263b52;
+	color: #ffffff;
+	font-size: 12;
+	text-align:center;
+}
+
+VScrollBar {
+	thumbHeight:20;
+ 	arrowColor: #c5dbf0;
+	backgroundColor:#29486c;
+ 	trackColor: #1b2f42;
+ 	thumbLeftColor: #c5dbf0;
+ 	thumbRightColor: #81addc;
+ 	thumbLineColor: #35485c;
+/* 	up-arrow-skin: ClassReference("com.playlist.cairngorm.view.skins.VScrollBarSkin");
+ 	down-arrow-skin: ClassReference("com.playlist.cairngorm.view.skins.VScrollBarSkin");
+ 	track-skin: ClassReference("com.playlist.cairngorm.view.skins.VScrollBarSkin");
+ 	thumb-skin: ClassReference("com.playlist.cairngorm.view.skins.VScrollBarSkin");
+ 	bar-skin: ClassReference("com.playlist.cairngorm.view.skins.VScrollBarSkin");
+*/ 	
+}

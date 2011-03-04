@@ -1,0 +1,172 @@
+<xml>
+    <equipList>
+    	<!-- This should really be a gear ratio ... other bike setups would have different gear ratios -->
+        <equip id="e1" name="Spinning Trainer, 27 speed bike" min="1" max="27"/>
+        <equip/>
+    </equipList>	
+    <termList>
+        <term id="t1" name="heartrate"/>
+        <term id="t2" name="rpms"/>
+        <term id="t3" name="sprint"/>
+    </termList>
+	<!-- These lists should be Cachable -->
+    <pInstList mod_time="">
+        <pInst id="i1">Ramp up heartrate to 80% to while keeping knees tucked.</pInst>			    
+        <pInst id="i2">Remember to keep knees tucked</pInst>		            
+        <pInst id="i3">Ramp up to 150 rpms for.</pInst>
+    	<pInst id="i4">Sprint at 90%</pInst>
+    	<pInst id="i5">Pedal at 80%</pInst>                            
+        <pInst id="i6">Recover, grab a wipe, grab a drink</pInst>
+        <pInst id="i7">Warming up for next effort</pInst>
+        <pInst id="i8">We will be doing a cadence count - 18-20 for 15 seconds</pInst>
+        <pInst id="i9" duration="1">Count for cadence in 3</pInst>
+        <pInst id="i10" duration="1">Count for cadence in 2</pInst>
+        <pInst id="i11" duration="1">Count for cadence in 1</pInst>
+        <pInst id="i12" duration="15">Count your cadence</pInst>
+        <pInst id="i13">Stop counting</pInst>
+        <pInst id="i14">Hold cadence</pInst>
+    </pInstList>
+    <pAudList>
+    </pAudList>
+    <!-- These could be video search results from youtube, or a cached result from the server -->
+    <pVidList>
+    </pVidList>
+    <!-- level ranges should be reusable across different activities -->
+    <pDataSetList>
+        <!-- No, numbers correlate between users better than levels - when users have different level schemas -->
+        <pDataSet id="302" user="111" type="heartrate" range-max="200" range-min="60">140,150,160,160,160,160,160,160,160,160</pDataSet>
+    </pDataSetList>			    
+    <!-- Cachable -->			
+    <pSegList>
+    	<pSeg id="ps1" dur="30" title="Cadence count 18-20 RPM prep">
+            <instList>
+                <inst xref="i7"/>
+                <inst xref="i8" offset="10"/>
+            </instList>
+            <dataSetList>
+            	<dataSet name="resistance" equip-xref="e1">8,8</dataSet>
+            	<dataSet name="heartrate">120,140</dataSet>
+            </dataSetList>
+    	</pSeg>			    	
+    	<pSeg id="ps2" dur="30" title="ramp cadence to 150RPM">
+            <instList>
+    		<inst xref="i3"/>
+            </instList>
+    	</pSeg>			    	
+        <pSeg id="ps3" dur="50" title="Interval">
+            <instList>
+        	<inst xref="i5"/>
+        	<inst xref="i6" offset="30"/>
+            </instList>
+        </pSeg>			    	                    
+        <pSeg id="ps4" dur="30" title="80% cadence">
+            <instList>
+        	<inst xref="i5"/>
+            </instList>
+            <dataSetList>
+            	<dataSet name="resistance" equip-xref="e1">7,7</dataSet>
+            	<dataSet name="heartrate">140,160</dataSet>
+            </dataSetList>
+        </pSeg>                                    
+        <pSeg id="ps5" dur="20" title="Rest-Recover">
+            <instList>
+        	<inst xref="i6"/>
+            </instList>
+            <dataSetList>
+            	<dataSet name="resistance" equip-xref="e1">4,4</dataSet>
+            	<dataSet name="heartrate">160,140</dataSet>
+            </dataSetList>
+        </pSeg>
+        <pSeg id="ps6" dur="28" title="Cadence count 18-20 RPM interval" isStaticDur="true">
+            <instList>
+        	<inst xref="i8"/>
+        	<inst offset="10" xref="i9"/>
+        	<inst offset="11" xref="i10"/>                    	                    	
+        	<inst offset="12" xref="i11"/>
+        	<inst offset="13" xref="i12"/>                    	                    	
+        	<inst offset="28" xref="i13"/>
+            </instList>
+            <dataSetList>
+            	<dataSet name="resistance" equip-xref="e1">12,12</dataSet>
+            	<dataSet name="heartrate">140,148</dataSet>
+            </dataSetList>                    	
+        </pSeg>
+        <pSeg id="ps7" dur="30" title="Hold cadence">
+            <instList>
+        	<inst xref="i14"/>
+            </instList>
+            <dataSetList>
+            	<dataSet name="resistance" equip-xref="e1">8,8</dataSet>
+            	<dataSet name="heartrate">140,140</dataSet>
+            </dataSetList>                    	
+        </pSeg>                                                           	
+    </pSegList>
+    <pStageList>
+        <pStage id="s0" title="Level 3 Interval stage" videoUrl="nQBPMouBaDA">
+            <desc><![CDATA[A series of fast-paced intervals - 80% effort at <a href="term-level-3" class="dictionary">Level 3</a>]]></desc>
+            <segList>
+                <seg xref="ps6"/>
+                <seg xref="ps7"/>
+                <seg xref="ps6"/>
+                <seg xref="ps7"/>
+                <seg xref="ps5"/>
+            </segList>
+        </pStage>		
+        <pStage id="s1" type="cycling_warmpup" title="Cadence count, 18-20" videoUrl="b7o83U-0xLM">
+            <!-- As a simplification, the instruction list starts right when the stage or segment begins-->
+            <desc/>
+            <dataSetList>
+                <!-- Overrides heartrate data inherited from program segments. -->		                        
+                <dataSet name="heartrate">120,130,150,160,170,160,190,120</dataSet>
+            </dataSetList>
+            <vidList>
+                <vid xref="v1"/>
+            </vidList>
+            <audList>
+            </audList>
+            <!-- Program Segments are sequential pieces of a stage where directions may change -->
+            <!-- This gets translated into a WorkoutStageVO -->
+            <segList>
+                <seg xref="ps6"/>
+                <seg xref="ps7"/>
+                <seg xref="ps6"/>
+                <seg xref="ps7"/>
+                <seg xref="ps5"/>
+            </segList>
+        </pStage>							           
+        <pStage id="s3" title="Hill climb endurance 72-80RPM" videoUrl="nQBPMouBaDA">
+            <desc><![CDATA[Hill climb endurance 72-80RPM]]></desc>
+            <segList>
+                <seg xref="ps4"/>
+                <seg xref="ps5"/>
+                <seg xref="ps4"/>
+                <seg xref="ps5"/>
+                <seg xref="ps4"/>
+                <seg xref="ps5"/>
+                <seg xref="ps4"/>
+                <seg xref="ps5"/>
+            </segList>
+        </pStage>				
+        <pStage id="s4" title="Spin Fast 100-120RPM" videoUrl="nQBPMouBaDA">
+            <desc><![CDATA[Spin Fast 100-120RPM]]></desc>
+            <segList>
+                <seg xref="ps4"/>
+                <seg xref="ps6"/>
+                <seg xref="ps5"/>
+                <seg xref="ps4"/>
+                <seg xref="ps5"/>
+            </segList>
+        </pStage>				
+    </pStageList>
+    <workoutList>
+        <workout id="2345" desc="Workout #2" title="Workout #2" user_id="0">
+            <stageList>
+                <stage xref="s3"/>
+                <stage xref="s1"/>
+                <stage xref="s2"/>
+                <stage xref="s3"/>
+            </stageList>
+        </workout>
+    </workoutList>						    			  
+    <!-- TODO: define user hr zones - make heartrate a % of max -->
+</xml>

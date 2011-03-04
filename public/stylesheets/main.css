@@ -1,0 +1,394 @@
+/* begin overall style */
+body
+{
+		margin: 0;
+		padding: 0;
+		background: white;
+		color: #444;
+    font: normal 12px/1.8 "Helvetica Italic", Arial, "Lucida Grande", sans-serif;
+    text-align:center;	
+}
+
+#wrapper {
+    background:transparent url('/images/backgrounds/background-header2.gif') repeat-x center top;
+    display:table;
+    width:100%;		
+}
+
+#page {
+		display:table;
+		width: 1000px;
+		margin: 0 auto;
+		padding: 0;
+}
+
+a {
+    color:#3F7FCC;
+    text-decoration:none;
+    outline:none;
+}
+
+a:hover {
+    color:#1A4E8F;
+    text-decoration:underline;
+}
+a strong {
+    color:inherit;
+    font-family:inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight:bold;
+}
+h1 {
+    font-size:24px;
+    line-height:1;
+    margin-bottom:20px;
+}
+
+h2 {
+    font-size:16px;
+    line-height:1;
+    margin-bottom:10px;
+}
+h3 {
+    font-size:15px;
+    line-height:1;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+h4 {
+    font-size:14px;
+    line-height:1;    
+}
+h5 {
+    font-size:13px;
+    line-height:1;        
+}
+h6 {
+    font-size:12px;
+    line-height:1;        
+}
+
+
+
+#nav
+{
+	height: 34px;
+	position: relative;
+	font-style: italic;
+}
+
+#nav h6 {
+    position:absolute;
+    left:0;
+    top:0;
+}
+
+#nav h6 a {
+    background:transparent url('/images/spinworkouts-logo3.png') no-repeat left top;
+    display:block;
+    height:32px;
+    text-indent:-9999px;
+    width:148px;
+    cursor:pointer;
+}
+
+#nav p {
+    font-size:13px;
+    font-weight:normal;
+    text-align:right;
+    line-height:34px;
+    height:32px;
+    margin-bottom:0;
+}
+
+#nav p span {
+    color:#303ed7;
+}
+
+#nav p a {
+    color:#000eb7;
+		font-weight:bold;
+}
+
+ul#nav-user-links {
+    height:34px;
+    position:absolute;
+    left:170px;
+}
+
+ul#nav-user-links li {
+    float:left;
+    margin-right:20px;
+    line-height:32px;
+    font-size:13px;
+		font-weight:bold;
+}
+
+ul#nav-user-links li a {
+	color:#000eb7;	
+    display:block;
+}
+
+ul#nav-user-links li a:hover,
+#nav p a:hover {
+    color:#c0c0c0;
+}
+
+#content
+{
+}
+
+#container {
+		margin:0 auto;
+		padding:0;
+		position:relative;
+		text-align:left;
+		width:1010px;
+/*		width:984px; */
+}
+
+#footer
+{
+	padding: 10px 0 40px;
+	margin:0 auto;
+	font-size: 0.8em;
+	text-align: center;
+	width:1000px;
+	overflow:hidden;
+}
+/* end of overall style */
+
+/* begin data grid style */
+table.dataGrid
+{
+	background: white;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+table.dataGrid th, table.dataGrid td
+{
+	font-size: 0.9em;
+	border: 1px #4F81BD solid;
+	padding: 0.3em;
+}
+
+table.dataGrid th
+{
+	background: #d3dfee;
+	text-align: center;
+}
+
+table.dataGrid th.label
+{
+	width: 150px;
+}
+
+table.dataGrid tr.odd
+{
+	background: #E6F2FF;
+}
+/* end of data grid style */
+
+.actionBar
+{
+	margin: 10px;
+}
+
+div.item
+{
+	margin: 10px 0 0 0;
+	border: 1px solid silver;
+	padding: 5px;
+}
+
+  /*background: #a8a6c5 */
+
+div.workoutListItem
+{
+  background:transparent url('/img/backgrounds/background-header2.gif') repeat-x center top;
+	width:100%;
+}
+
+div.workoutListItem a
+{
+  color:#000eb7;
+}
+
+div.workoutListItem a:hover {
+    color:#c0c0c0;
+}
+
+div.workoutListItem.selected
+{
+  background: #7873b8
+}
+
+
+/* Clear Floated Elements
+----------------------------------------------------------------------------------------------------*/
+
+/* http://sonspring.com/journal/clearing-floats */
+
+.clear {
+				clear: both;
+				display: block;
+				overflow: hidden;
+				visibility: hidden;
+				width: 0;
+				height: 0;
+}
+
+/* http://perishablepress.com/press/2008/02/05/lessons-learned-concerning-the-clearfix-css-hack
+** */
+
+.clearfix:after {
+						clear: both;
+						content: ' ';
+						display: block;
+						font-size: 0;
+						line-height: 0;
+						visibility: hidden;
+						width: 0;
+						height: 0;
+}
+
+.clearfix {
+		        display: inline-block;
+}
+
+* html .clearfix {
+		        height: 1%;
+}
+
+.clearfix {
+		        display: block;
+}				
+
+/*-------------------------------
+
+  -------------------------------*/
+#frmGlobalSearch #search_facets {
+    width:200px;
+		padding-top:22px;
+		padding-left:15px;
+		float:right;
+}
+
+#frmGlobalSearch #txtGlobalSearch.focusField,
+input#txtHomeSearch.focusField {
+		color:#404040;
+}
+
+#main-search #nav_search_button {
+    background:transparent url('/img/search-button.gif') no-repeat left top;
+		width:38px;
+		height:31px;
+		text-indent:-9999px;
+		border:0;
+		cursor:pointer;
+		position:relative;
+		top:15px;
+		margin:0;
+		padding:0;
+		float:left;
+}
+
+
+/* ------------------------------------------
+*        GRID SYSTEM
+* ---------------------------------------- */
+div.row { width: 100%; padding: 0 0 20px; }
+div.row:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+div.row.last { padding: 0; }
+div.column, div.columns { margin: 0 20px 0 0; float: left; }
+div.column.WORKOUT_TEASER, div.column.WORKOUT_TEASER { width: 690; }
+div.column.WORKOUT_DETAIL, div.column.WORKOUT_DETAIL { width: 690; }
+div.column.WORKOUT_LIST, div.column.WORKOUT_LIST { width: 690; }
+div.column.five, div.five.columns { width: 280px; }
+div.column.six, div.columns.six { width: 340px; }
+div.column.seven, div.columns.seven { width: 400px; }
+div.column.eight, div.columns.eight { width: 460px; }
+div.column.nine, div.columns.nine { width: 520px; }
+div.column.ten, div.columns.ten { width: 580px; }
+div.column.eleven, div.columns.eleven { width: 640px; }
+div.column.twelve, div.columns.twelve { width: 700px; }
+div.column.thirteen, div.columns.thirteen { width: 760px; }
+div.column.fourteen, div.columns.fourteen { width: 820px; }
+div.column.fifteen, div.columns.fifteen { width: 880px; }
+div.column.half, div.columns.half { width: 460px; }
+div.column.third, div.columns.third { width: 300px; }
+div.column.big, div.columns.big { width: 540px; margin: 0 40px 0 0; }
+body.in_ie6 div.column.big, body.in_ie6 div.columns.big { width: 530px; margin: 0 30px 0 0; }
+div.column.small, div.columns.small { width: 360px; margin: 0; }
+div.column.three, div.columns.three { width: 160px; }
+div.column.two, div.columns.two { width: 100px; }
+div.column.one, div.columns.one { width: 40px; }
+div.column.four, div.columns.four { width: 220px; }
+div.column.last, div.columns.last { margin-right: 0; }
+div.column.twothirds, div.columns.twothirds { width:690px;}
+div.column.col1, div.columns.col1 { width:158px; margin-right:40px;}
+div.column.col2, div.columns.col2 { width:420px;}
+
+body.in_ie div.row { position: relative; }
+
+
+
+/* ------------------------------------------
+*	 ERRORS & ALERTS
+* ---------------------------------------- */
+.notifications ul { list-style:none; margin: 0; padding: 0; }
+
+/* Plain, Simple Alert */
+.alert { position: relative; font-size: 13px; background: #f5f5f5; margin: 0 0 1.5em; padding: 0.5em 3em 0.5em 0.7em; border: 3px solid #ddd; text-shadow: 0 1px 1px #fff; }
+.alert small { color: #888; text-shadow: none; }
+.alert a.close { background: url(/img/buttons/gray-close.gif); position: absolute; right: 0.65em; top: 0.65em; width: 16px; height: 16px; overflow: hidden; text-decoration: none; text-indent: -1000em; }
+
+/* Message */
+.alert.message { background: #dce7f5; border-color: #bfccdb; color: #3e5570; }
+.alert.message a { color: #3a74ba; }
+.alert.message small { color: #3c699f; }
+.alert.message a.close { background: url(/img/buttons/blue-close.gif); }
+
+/* Warnings */
+.alert.warning { background: #fffa99; border-color: #fe6; color: #855100; }
+.alert.warning a { color: #cb6e00; }
+.alert.warning small { color: #a77322; }
+.alert.warning a.close { background: url(/img/buttons/yellow-close.gif); }
+
+/* Errors */
+.alert.error { background: #df4729; border-color: #c83518; color: #fff; text-shadow: 0 1px 1px #bd2507; }
+.alert.error a { color: #ffb48e; }
+.alert.error strong { color: #fff; }
+.alert.error small { color: #7c2900; }
+.alert.error a.close { background: url(/img/buttons/red-close.gif); }
+
+/* Success */
+.alert.success { background: #95c210; border-color: #84ab0e; color: #fff; text-shadow: 0 1px 1px #6f9700; }
+.alert.success a { color: #eaffa6; }
+.alert.success strong { color: #fff; }
+.alert.success small { color: #526d00; }
+.alert.success a.close { background: url(/img/buttons/green-close.gif); }
+
+/* Dashed Boxes */
+div.alert { background: #f5f5f5; margin: 0 0 1.5em; padding: 1em; border: 2px dashed #ddd; }
+
+/* Other Browsers */
+body.in_ie .alert { height: 1%; }
+body.in_ff3 .alert { }
+
+
+/* Align Elements */
+
+.align-left {
+    text-align:left;
+}
+
+.align-right {
+    text-align:right;
+}
+
+
+

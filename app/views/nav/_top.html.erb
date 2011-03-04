@@ -1,0 +1,39 @@
+		<div id="nav">
+	        <h6><a href="/" class="ajax">Spinworkouts<!--<?php echo CHtml::encode(Yii::app()->name); ?>--></a></h6>
+                    <div id="nav-user">
+<!--
+	            	<?php $this->renderPartial("application.views.nav.top");?>
+-->
+
+						<ul id="nav-user-links">
+							<li><a href="/site/contact" class="ajax modal">Contact</a></li>
+<!--
+<?php 
+/*  TODO: profile editting
+if (!Yii::app()->user->isGuest) {
+    echo '<li><a href="/user/profile" class="ajax modal">Profile</a></li>';
+}
+*/
+?>
+-->
+						</ul>
+						<p>
+<!--
+<?php 
+
+if (Yii::app()->user->isGuest) { 
+    echo '<a href="/user/login" class="ajax modal">Login</a>';
+    echo '<span> | </span>';
+    echo '<a href="/user/registration" class="ajax modal">Sign Up</a>';
+} else {
+    echo '<a href="/user/profile">Hi, '.Yii::app()->user->getName().'</a>';
+    echo '<span> | </span>';
+    echo '<a href="/user/logout" class="ajax">Logout</a>';
+}
+?>
+-->
+						</p>
+
+
+                    </div>
+		</div><!-- nav -->

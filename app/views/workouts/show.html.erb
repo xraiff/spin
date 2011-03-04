@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @workout.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @workout.description %>
+</p>
+
+<p>
+  <b>Duration:</b>
+  <%= @workout.duration %>
+</p>
+
+<p>
+  <b>Tags:</b>
+  <%= join_tags(@workout) %>
+</p>
+
+<h2>Comments</h2>
+<%= render :partial => "comments/comment",
+           :collection => @workout.comments %>
+
+
+<h2>Add a comment:</h2>
+<%= render "comments/form" %>
+
+<%= link_to 'Edit Workout', edit_workout_path(@workout) %> |
+<%= link_to 'Back to Workouts', workouts_path %>

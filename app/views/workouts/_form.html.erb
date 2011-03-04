@@ -1,0 +1,33 @@
+<% @workout.tags.build %>
+<%= form_for(@workout) do |workout_form| %>
+  <% if @workout.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@workout.errors.count, "error") %> prohibited this workout from being saved:</h2>
+
+      <ul>
+      <% @workout.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= workout_form.label :name %><br />
+    <%= workout_form.text_field :name %>
+  </div>
+  <div class="field">
+    <%= workout_form.label :description %><br />
+    <%= workout_form.text_field :description %>
+  </div>
+  <div class="field">
+    <%= workout_form.label :duration %><br />
+    <%= workout_form.text_field :duration %>
+  </div>
+  <h2>Tags</h2>
+  <%= render :partial => 'tags/form',
+             :locals => {:form => workout_form} %>
+  <div class="actions">
+    <%= workout_form.submit %>
+  </div>
+<% end %>

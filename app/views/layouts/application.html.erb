@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Spinworkouts</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+<script type="text/javascript">
+//<![CDATA[
+var FLASH_MINREV = "9.0.115";
+var FLASH_GOODREV = "9.0.115";
+
+/*
+var player_default_flashvars =
+    {"api_baseurl":"<?php echo Yii::getPathOfAlias('url_api')?>",
+    "baseurl":"<?php echo Yii::getPathOfAlias('url_base')?>",
+    "bgcolor":"#ffffff",
+    "is_enablejs":true,
+    "is_onsite":true,
+    "javascript_id":"swsWorkoutPlayer",
+    "loader_name":"",
+    "parent_div":"workoutPlayerPanel",
+    "player_baseurl":"<?php echo Yii::getPathOfAlias('url_player')?>",
+    "player_name":"WorkoutApp",
+    "so_path":"sws-so1",
+    "use_loader":false,
+    "user_id":"<?php if (isset(Yii::app()->user->id)) echo Yii::app()->user->id; else echo '0';?>"
+    };
+var player_load_object = {};
+<?php
+if (isset(Yii::app()->user->id)) {
+    Yii::import('application.modules.user.models.User');
+    echo "SWS.user.uid = " . Yii::app()->user->id . ";\n";
+    $user = User::model()->findByPk(Yii::app()->user->id);
+
+    if ($user && $user->hasComplied) {
+        echo "SWS.user.hasComplied = 1;\n";
+    } 
+}
+?>
+*/
+
+//]]>
+</script>
+</head>
+<body style="background: #EEEEEE">
+<div id="wrapper">
+	<div id="page">
+		<%= render :partial => 'nav/top' %>
+		<%# render :partial => 'nav/top', :locals => { :top => @nav } #%>
+	    <div id="container">
+	        <div id="content" class="twothirds columns">
+	            <div id="main-wrapper">
+	                <div id="main-search" class="twothirds columns">
+                            <br>
+	                    <h3>Welcome to Spinworkouts, a tool for indoor cycling workouts.</h3>
+	                    <br><br>
+                            <h3>Checkout our featured workouts:</h3>
+                        </div>
+	                <div id="flex-wrapper" class="WORKOUT_TEASER twothirds columns">
+	                    <div id="workoutPlayerPanel"></div>
+	                </div>
+
+<!--
+	                    <form id="frmGlobalSearch" action="http://steve.dev.he.playlist.com/searchbeta" method="get">
+	                        <input id="txtGlobalSearch" type="text" name="searchfor" class="textbox idleField" maxlength="100" value="Search for a song or artist"/>
+	                        <input id="globalSearchType" type="hidden" name="t" value="tracks"/>
+	                        <button type="submit" class="image_button" id="nav_search_button">Search</button>
+	                        <div id="search_facets"> </div>
+	                    </form>
+-->
+	            </div>
+	            <div id="html-wrapper"> 
+<%= yield %>
+	            </div>
+	        </div><!-- content -->
+	        <div id="right-column" class="third column last">
+	            <iframe height="250" width="300" style="margin-right: 0;"></iframe>
+	        </div>
+	        <div id="debug" class="third column last">
+	            <textarea id="debug-txt" style="width:300px;height:400px;border:0px;"></textarea>
+	        </div>
+	    </div><!-- container -->
+	    <div id="footer">
+	        Copyright &copy; 2011 by Strategic Workout Systems LLC.<br/>
+	        All Rights Reserved.<br/>
+	    </div><!-- footer -->
+	</div><!-- page -->
+</div><!-- wrapper -->
+<script type="text/javascript"> 
+//<![CDATA[ 
+    //SWS.init();
+//]]> 
+</script>
+
+</body>
+</html>
